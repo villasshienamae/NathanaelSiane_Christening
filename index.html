@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nathanael Siane | Christening Invitation & RSVP</title>
+  
+  <!-- Google Fonts: Calligraphy + Editorial Serif + Tech Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- DESIGN SYSTEM & COLOR PALETTE --- */
+    :root {
+      --color-white: #FFFFFF;
+      --color-cream-bg: #FBF9F6;
+      --color-beige-light: #F4EFEA;
+      --color-beige: #E6DAD0;
+      --color-beige-dark: #CBB9A8;
+      --color-soft-blue: #B8CEDC;
+      --color-navy-accent: #2A435D;
+      --color-navy-dark: #192C3F;
+      --color-text-main: #222222;
+      --color-text-muted: #55606A;
+      
+      /* Typography Stack */
+      --font-calligraphy: 'Alex Brush', cursive;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-tech: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    /* --- RESET & BASE STYLES --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #ECE7E1;
+    }
+
+    body {
+      font-family: var(--font-tech);
+      background-color: var(--color-cream-bg);
+      color: var(--color-text-main);
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-wrapper {
+      width: 100%;
+      max-width: 800px;
+      background: var(--color-white);
+      box-shadow: 0 20px 60px rgba(25, 44, 63, 0.07);
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      border-left: 1px solid rgba(0,0,0,0.03);
+      border-right: 1px solid rgba(0,0,0,0.03);
+    }
+
+    /* --- 01. ANNOUNCEMENT BAR --- */
+    .announcement-bar {
+      background-color: var(--color-navy-dark);
+      color: var(--color-white);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .announcement-bar .title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .announcement-bar .dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-soft-blue);
+      border-radius: 50%;
+    }
+
+    .announcement-bar .bar-cta {
+      color: var(--color-soft-blue);
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.2s;
+    }
+
+    .announcement-bar .bar-cta:hover {
+      opacity: 0.8;
+    }
+
+    /* --- MINIMAL STICKY NAVIGATION --- */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-beige-light);
+      z-index: 1000;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-navy-dark);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-soft-blue);
+    }
+
+    .btn-nav {
+      background-color: var(--color-navy-accent);
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background-color: var(--color-navy-dark);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background: linear-gradient(180deg, rgba(184, 206, 220, 0.2) 0%, rgba(251, 249, 246, 0) 100%);
+      padding: 60px 32px 36px;
+      text-align: center;
+    }
+
+    .hero .kicker {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      color: var(--color-navy-accent);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .hero h1.calligraphy-title {
+      font-family: var(--font-calligraphy);
+      font-size: 80px;
+      font-weight: 400;
+      color: var(--color-navy-dark);
+      line-height: 0.95;
+      margin-bottom: 12px;
+    }
+
+    .hero .editorial-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 24px;
+      color: var(--color-text-muted);
+      line-height: 1.3;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      width: 100%;
+      background-color: var(--color-navy-accent);
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 18px 24px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(42, 67, 93, 0.15);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-navy-dark);
+      box-shadow: 0 12px 28px rgba(25, 44, 63, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* --- PREMIUM HORIZONTAL SCROLLING TICKER --- */
+    .ticker-container {
+      width: 100%;
+      overflow: hidden;
+      background-color: rgba(184, 206, 220, 0.15);
+      border-top: 1px solid var(--color-beige);
+      border-bottom: 1px solid var(--color-beige);
+      padding: 12px 0;
+      display: flex;
+      user-select: none;
+    }
+
+    .ticker-track {
+      display: flex;
+      white-space: nowrap;
+      will-change: transform;
+      animation: ticker-scroll 28s linear infinite;
+    }
+
+    .ticker-item {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: var(--color-navy-dark);
+      padding: 0 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .ticker-symbol {
+      color: var(--color-navy-accent);
+      font-size: 10px;
+      opacity: 0.7;
+    }
+
+    @keyframes ticker-scroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track {
+        animation: none;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        white-space: normal;
+      }
+      .ticker-container { padding: 10px 16px; }
+    }
+
+    /* --- MAIN CONTENT --- */
+    .section {
+      padding: 40px 32px;
+      scroll-margin-top: 60px;
+    }
+
+    .event-card {
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-beige);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .event-card h3.editorial-heading {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: var(--color-navy-dark);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .event-card p {
+      font-size: 15px;
+      color: var(--color-text-main);
+      margin-bottom: 8px;
+    }
+
+    .event-card .time-highlight {
+      font-weight: 700;
+      color: var(--color-navy-accent);
+      letter-spacing: 0.5px;
+    }
+
+    /* DRESS CODE */
+    .dress-code-box {
+      background-color: rgba(184, 206, 220, 0.12);
+      border: 1px solid rgba(184, 206, 220, 0.4);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .dress-code-box h4 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--color-navy-dark);
+      margin-bottom: 6px;
+    }
+
+    .swatch-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .swatch-white { background-color: #FFFFFF; border: 1px solid #E0E0E0; }
+    .swatch-beige { background-color: #E6DAD0; }
+    .swatch-blue  { background-color: #B8CEDC; }
+    .swatch-navy  { background-color: #2A435D; }
+
+    /* --- OVERSIZED NUMBERED EDITORIAL GIFT REGISTRY --- */
+    .editorial-registry {
+      margin-bottom: 56px;
+    }
+
+    .registry-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .registry-header h3 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      color: var(--color-navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .registry-note {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .registry-list {
+      border-top: 1px solid var(--color-beige);
+    }
+
+    .registry-item {
+      display: flex;
+      align-items: center;
+      padding: 20px 8px;
+      border-bottom: 1px solid var(--color-beige);
+      transition: background-color 0.25s ease, padding-left 0.25s ease;
+    }
+
+    .registry-item:hover {
+      background-color: var(--color-cream-bg);
+      padding-left: 16px;
+    }
+
+    .item-number {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--color-beige-dark);
+      width: 70px;
+      flex-shrink: 0;
+      line-height: 1;
+      transition: color 0.25s ease;
+    }
+
+    .registry-item:hover .item-number {
+      color: var(--color-navy-accent);
+    }
+
+    .item-content h4 {
+      font-family: var(--font-tech);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-navy-dark);
+      margin-bottom: 2px;
+      letter-spacing: 0.2px;
+    }
+
+    .item-content p {
+      font-size: 12px;
+      color: var(--color-text-muted);
+    }
+
+    /* RSVP CARD */
+    .rsvp-card {
+      background: var(--color-white);
+      border: 2px solid var(--color-soft-blue);
+      border-radius: 16px;
+      padding: 40px 28px;
+      box-shadow: 0 16px 40px rgba(42, 67, 93, 0.08);
+    }
+
+    .rsvp-card h2.calligraphy-headline {
+      font-family: var(--font-calligraphy);
+      font-size: 64px;
+      color: var(--color-navy-dark);
+      text-align: center;
+      line-height: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: var(--color-navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--color-beige-dark);
+      border-radius: 8px;
+      font-family: var(--font-tech);
+      font-size: 15px;
+      background-color: var(--color-cream-bg);
+      color: var(--color-text-main);
+      outline: none;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid var(--color-beige-light);
+    }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hero h1.calligraphy-title { font-size: 64px; }
+      .announcement-bar { font-size: 10px; }
+      .item-number { font-size: 28px; width: 50px; }
+      .item-content h4 { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    
+    <!-- 01 — ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+      <div class="title">
+        <span class="dot"></span>
+        Nathanael Siane’s Christening
+      </div>
+      <a href="#rsvp" class="bar-cta">RSVP Open &rarr;</a>
+    </div>
+
+    <!-- MINIMAL STICKY NAVIGATION -->
+    <nav class="sticky-nav">
+      <ul class="nav-links">
+        <li><a href="#details">Date & Location</a></li>
+        <li><a href="#dresscode">Dress Code</a></li>
+        <li><a href="#registry">Gift Registry</a></li>
+      </ul>
+      <div>
+        <a href="#rsvp" class="btn-nav">RSVP →</a>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+      <p class="kicker">You are cordially invited</p>
+      
+      <h1 class="calligraphy-title">
+        Nathanael Siane
+      </h1>
+      
+      <p class="editorial-sub">
+        Holy Baptism<br>&amp; Christening
+      </p>
+
+      <a href="#rsvp" class="btn-primary">Reserve Your Seat</a>
+    </header>
+
+    <!-- PREMIUM HORIZONTAL TICKER -->
+    <div class="ticker-container" aria-label="Event summary ticker">
+      <div class="ticker-track">
+        <!-- FIRST PASS -->
+        <span class="ticker-item">Sunday, November 22, 2026</span>
+        <span class="ticker-symbol">✦</span>
+        <span class="ticker-item">San Isidro Labrador Church</span>
+        <span class="ticker-symbol">✦</span>
+        <span class="ticker-item">Shakey's Pilar</span>
+        <span class="ticker-symbol">✦</span>
+
+        <!-- SECOND PASS FOR SEAMLESS LOOPING -->
+        <span class="ticker-item">Sunday, November 22, 2026</span>
+        <span class="ticker-symbol">✦</span>
+        <span class="ticker-item">San Isidro Labrador Church</span>
+        <span class="ticker-symbol">✦</span>
+        <span class="ticker-item">Shakey's Pilar</span>
+        <span class="ticker-symbol">✦</span>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="section">
+      
+      <!-- DATE & LOCATION -->
+      <section id="details" class="event-card">
+        <h3 class="editorial-heading">
+          The Ceremony<br>&amp; Celebration
+        </h3>
+        <p><strong>Sunday, November 22, 2026</strong></p>
+        <p class="time-highlight">Church: San Isidro Labrador Church</p>
+        <p class="time-highlight" style="margin-top: 4px;">Reception: Shakey's Pilar</p>
+      </section>
+
+      <!-- DRESS CODE -->
+      <section id="dresscode" class="dress-code-box">
+        <h4>Dress Code &amp; Palette</h4>
+        <p style="font-size: 13px; color: var(--color-text-muted);">Semi-Formal attire in tones of Soft Blue, Warm Beige, or Classic White</p>
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-white" title="White"></div>
+          <div class="swatch swatch-beige" title="Beige"></div>
+          <div class="swatch swatch-blue" title="Soft Blue"></div>
+          <div class="swatch swatch-navy" title="Navy Accent"></div>
+        </div>
+      </section>
+
+      <!-- OVERSIZED EDITORIAL GIFT REGISTRY -->
+      <section id="registry" class="editorial-registry">
+        <div class="registry-header">
+          <h3>Gift Wishlist</h3>
+          <p class="registry-note">Your presence and prayers on Nathanael’s special day are the greatest gift. Should you wish to honor him with a present or monetary blessing, here are a few suggestions:</p>
+        </div>
+
+        <div class="registry-list">
+          <div class="registry-item">
+            <div class="item-number">01</div>
+            <div class="item-content">
+              <h4>Rascal &amp; Friends Diapers</h4>
+              <p>Size: Large</p>
+            </div>
+          </div>
+
+          <div class="registry-item">
+            <div class="item-number">02</div>
+            <div class="item-content">
+              <h4>Lactacyd Baby Essential Care</h4>
+              <p>Body &amp; Hair Wash</p>
+            </div>
+          </div>
+
+          <div class="registry-item">
+            <div class="item-number">03</div>
+            <div class="item-content">
+              <h4>Uni-Love Wipes</h4>
+              <p>Unscented Wipes &amp; Dry Wipes</p>
+            </div>
+          </div>
+
+          <div class="registry-item">
+            <div class="item-number">04</div>
+            <div class="item-content">
+              <h4>Uni-Love Baby Vegan Cream</h4>
+              <p>Gentle skin care essential</p>
+            </div>
+          </div>
+
+          <div class="registry-item">
+            <div class="item-number">05</div>
+            <div class="item-content">
+              <h4>Educational Toys</h4>
+              <p>Age-appropriate developmental toys</p>
+            </div>
+          </div>
+
+          <div class="registry-item">
+            <div class="item-number">06</div>
+            <div class="item-content">
+              <h4>Baby Clothes</h4>
+              <p>Sizing for 9–12 months</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP SECTION -->
+      <section id="rsvp" class="rsvp-card">
+        <h2 class="calligraphy-headline">
+          Response Requested
+        </h2>
+        
+        <p style="text-align: center; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-navy-accent); font-weight: 700; margin-bottom: 24px;">
+          Kindly Reply on or before October 30
+        </p>
+
+        <!-- Direct Email Form Submission via Formspree -->
+        <form action="https://formspree.io/f/xqaeoepq" method="POST">
+          <input type="hidden" name="_to" value="villasshienamae0115@gmail.com">
+          <input type="hidden" name="_subject" value="New RSVP for Nathanael Siane's Christening">
+
+          <div class="form-group">
+            <label for="fullName">Your Full Name</label>
+            <input type="text" id="fullName" name="Guest Name" placeholder="e.g. Maria Santos" required />
+          </div>
+
+          <div class="form-group">
+            <label for="attendance">Will You Be Joining Us?</label>
+            <select id="attendance" name="Attendance Status" required>
+              <option value="" disabled selected>Select your response</option>
+              <option value="Joyfully Accepts">Joyfully Accepts</option>
+              <option value="Regretfully Declines">Regretfully Declines</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Total Guest Count</label>
+            <input type="number" id="guests" name="Total Guests" min="1" max="5" value="1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Blessings / Wish for Nathanael</label>
+            <textarea id="message" name="Message" rows="3" placeholder="Share a message..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Confirm RSVP</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p style="font-family: var(--font-serif); font-style: italic; font-size: 18px; color: var(--color-navy-dark);">We look forward to celebrating with you.</p>
+      <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); margin-top: 4px;">With love, The Family</p>
+    </footer>
+
+  </div>
+
+</body>
+  </html>
+  
