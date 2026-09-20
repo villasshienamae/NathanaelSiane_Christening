@@ -534,6 +534,73 @@
 
     <!-- MAIN CONTENT -->
     <main class="section">
+      <!-- PHOTO HERO SECTION START -->
+<style>
+  .photo-hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 2.5rem auto 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .photo-hero-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .photo-card {
+    background: #fdfbf7;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .photo-frame {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f4f0ea;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: scale 0.5s ease;
+  }
+
+  .photo-card:hover .photo-frame img {
+    scale: 1.03;
+  }
+</style>
+
+<section class="photo-hero-section">
+  <div class="photo-card">
+    <div class="photo-frame">
+      <img src="path-to-your-first-photo.jpg" alt="Nathanael Siane Photo 1" />
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-frame">
+      <img src="path-to-your-second-photo.jpg" alt="Nathanael Siane Photo 2" />
+    </div>
+  </div>
+</section>
+<!-- PHOTO HERO SECTION END -->
+      
       
       <!-- DATE & LOCATION -->
       <section id="details" class="event-card">
